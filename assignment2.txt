@@ -1,0 +1,14 @@
+DECLARATION, DEFINITION AND INITIALIZATION
+DECLARATION is the introduction of a new variable to the program and telling the compiler that it is to be used later but does not yet contain a value e.g
+                 Var fruit;
+                 Var name;
+Definition is assigning a value to a variable that has already been declared e.g
+                Var fruit = “melon”;
+                 Var name = “Leslie”;
+Initialization is the means of assigning an initial value to a variable. So undefined will be the initial value of a declared variable. e.g
+               Var a = 2;
+               Undefined
+               a
+               2
+
+
