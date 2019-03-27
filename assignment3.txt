@@ -1,0 +1,45 @@
+var fruit_List = ["apples","kiwi","cantelope","oranges","peach","melon","pineapple"]
+
+function fruit_List(){
+
+console.log("fruit_list");
+
+}
+undefined
+
+
+fruit_List
+(7)
+ ["apples", "kiwi", "cantelope", "oranges", "peach", "melon", "pineapple"]
+
+fruit_List[0]
+
+"apples"
+
+fruit_List[1]
+
+"kiwi"
+
+fruit_List[2]
+
+"cantelope"
+
+fruit_List[3]
+
+"oranges"
+
+fruit_List[4]
+
+"peach"
+
+fruit_List[5]
+
+"melon"
+
+fruit_List[6]
+
+"pineapple"
+
+fruit_List["length"]
+
+7
