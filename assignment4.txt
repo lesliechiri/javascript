@@ -1,0 +1,33 @@
+function fruitCost(fruitName,quantity){
+
+
+fruitsList = {fruitName:"oranges",price:30},
+
+{fruitName:"peaches",price:20},
+
+{fruitName:"mango",price:50},
+
+{fruitName:"pineapple",price:60}
+
+
+var fruitName=fruitsList.fruitName
+
+
+var price=fruitsList.price
+
+
+var totalCost=quantity*price
+
+
+console.log(quantity+" "+fruitName+" "+"for KES"+totalCost)
+}
+
+
+
+undefined
+
+
+fruitCost("oranges",3);
+
+
+3 oranges for KES90
