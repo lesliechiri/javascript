@@ -1,22 +1,26 @@
-function kiosk() {
-  var fruits;
-  Fruits = ["apple","banana","melon","kiwi"," "];
-  
-  function setFruit(fruit){
-    Fruits = Fruits+fruit;
+function Kiosk () {
+
+  var fruits = [];
+
+  function setFruit (fruit) {
+    fruits.push(fruit);
   }
-  function getFruit(){
-    return Fruits;
+
+  function getFruits () {
+    return fruits;
   }
-  var publicAPI= {
-    set:setFruit,
-    get:getFruit
+
+  var publicAPI = {
+    setFruit : setFruit,
+    getFruits : getFruits
   }
+
   return publicAPI;
+  
 }
 
-var Kiosk=kiosk();
-Kiosk.set("pawpaw");
-console.log(Kiosk.get())
-
-"apple,banana,melon,kiwi, pawpaw"
+var kiosk = Kiosk();
+kiosk.setFruit("mango");
+kiosk.setFruit("apple");
+kiosk.setFruit("pear");
+console.log(kiosk.getFruits());
