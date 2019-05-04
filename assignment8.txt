@@ -1,0 +1,76 @@
+let user = {
+  name: "Leslie Muchiri",
+  years: 23
+};
+let{name} = user
+alert(name)
+
+
+
+
+let user = {
+  name: "Leslie Muchiri",
+  years: 23
+};
+
+let{years:age} = user;
+alert(age)
+
+
+
+
+
+let user = {
+  name: "Leslie Muchiri",
+  years: 23,
+  isStudent:false
+};
+for (let key in user) {
+  if (user.hasOwnProperty(key)){
+    console.log(user[key]);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ii)let ask = (question, yes, no) =>
+   (confirm(question))? yes(): no();
+
+ask(
+  "Do you agree?",
+  () =>alert("You agreed."), 
+  
+)
+
+
+let ask = (question, yes, no) =>
+   (confirm(question))? yes(): no();
+
+ask(
+  "Do you agree?",
+  () => alert("You canceled the execution."),
+ 
+  )
+
+
+
+
+
+
+
+
+
+
