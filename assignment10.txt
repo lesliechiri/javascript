@@ -1,0 +1,28 @@
+
+var body = document.body
+body.style.backgroundColor = "silver"
+
+
+
+var h1 = document.getElementById("title")
+h1.style.color = "green"
+
+
+var h3 = document.getElementById("les")
+h3.style.textTransform = "uppercase"
+
+
+var h3 = document.getElementById("dee")
+h3.style.textTransform = "uppercase"
+
+
+
+var fruit = document.createElement("li")
+fruit.innerHTML = ("Peaches")
+fruList.appendChild(fruit)
+
+
+
+var veg = document.createElement("li")
+veg.innerHTML = ("collards")
+vegList.appendChild(veg)

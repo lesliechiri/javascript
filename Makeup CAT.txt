@@ -1,0 +1,210 @@
+class Mkulima {
+  
+  constructor() {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+    this.printProducts = [];
+  }
+
+   addFarm(farmId,farmer,farmName,phone,address){
+   let farm = {
+     id: farmId,
+     farmer:farmer,
+     farmname: farmName,
+     phone:phone,
+     address:address
+     
+   }
+   this.farms.push(farm)
+ }
+  
+  getFarm(farmId){
+   
+   for(var i=0; i<this.farms.length; i++){
+     let farm = this.farms[i]
+     if (farm.id === farmId){
+      return farm
+     }
+    
+ }
+}
+  
+  removeFarm(farmId){
+    let farm = this.getFarm(farmId)
+    let index = this.farms.indexOf(farm)
+    this.farms.splice(index, 1)
+  }
+  
+  
+  updateFarm(farmId,farmer,farmName,phone,address){
+   let myList = this.farms
+   let objIndex = myList.findIndex(obj=>
+   obj.id == farmId)
+   myList[objIndex].id = farmId
+   myList[objIndex].farmer = farmer
+   myList[objIndex].farmName = farmName
+   myList[objIndex].phone = phone
+   myList[objIndex].address = address
+ 
+  }
+  
+  addVendor(vendorId,name,phone){
+    let vendor = {
+      id:vendorId,
+      name:name,
+      phone:phone
+    }
+    this.vendors.push(vendor)
+  }
+  
+  getVendor(vendorId){
+   
+   for(var i=0; i<this.vendors.length; i++){
+     let vendor = this.vendors[i]
+     if (vendor.id === vendorId){
+      return vendor
+     }
+    
+ }
+} 
+  
+  
+  removeVendor(vendorId){
+    let vendor = this.getVendor(vendorId)
+    let index = this.vendors.indexOf(vendor)
+    this.vendors.splice(index, 1)
+  }
+  
+  
+  
+  updateVendor(vendorId,name,phone){
+   let myList = this.vendors
+   let objIndex = myList.findIndex(obj=>
+   obj.id == vendorId)
+   myList[objIndex].id = vendorId
+   myList[objIndex].name = name
+   myList[objIndex].phone = phone
+  
+  }
+  
+  addProduct(productId,name,price){
+    let product = {
+    id:productId,
+    name:name,
+    price:price
+    }
+    this.products.push(product)
+  }
+  getProduct(productId){
+   
+   for(var i=0; i<this.products.length; i++){
+     let product = this.products[i]
+     if (product.id === productId){
+      return product
+     }
+    
+ }
+}
+  
+ removeProduct(productId){
+  let product = this.getProduct(productId)
+  let index = this.products.indexOf(product)
+  this.products.splice(index, 1)
+  }
+  
+   updateProduct(productId,name,price){
+   let myList = this.products
+   let objIndex = myList.findIndex(obj=>
+   obj.id == productId);
+   myList[objIndex].id = productId
+   myList[objIndex].name = name
+   myList[objIndex].price = price
+  
+   return myList
+ }
+   getPrintProduct() {
+    for(var i=0; i<this.products.length; i++) {
+   let product = this.products[i];
+   let a = {product:product.name
+            price:product.price};
+   this.printProducts.push(a);  
+    }
+   
+    return (this.printProducts);
+  }
+  
+  createOrder(productId,quantity,farmId,storeId){
+    let order = {
+      id:productId,
+      quantity:quantity,
+      farmid:farmId,
+      storeid:storeId
+    }
+    this.orders.push(order)
+  }
+  
+}
+
+let mkulima = new Mkulima()
+mkulima.addFarm(1,"Mwangi","kokos",720351345,421)
+mkulima.addFarm(2,"Kihara","Kimana",722819544,423)
+console.log(mkulima.farms)
+
+mkulima.getFarm(2)
+console.log(mkulima.farms)
+
+mkulima.removeFarm(1)
+console.log(mkulima.farms)
+
+
+mkulima.updateFarm(1,"mwas","kokos",703705309,429)
+mkulima.updateFarm(2,"chairman","Kimana",720544260,995)
+console.log(mkulima.farms)
+
+
+ mkulima.addVendor(17,"Lisa",708232436)
+ mkulima.addVendor(39,"Wamary",725874045)
+console.log(mkulima.vendors)
+ 
+ 
+mkulima.getVendor(39)
+console.log(mkulima.vendors)
+
+
+mkulima.removeVendor(17)
+console.log(mkulima.vendors)
+
+
+mkulima.updateVendor(17,"Abigael",722889762)
+mkulima.updateVendor(39,"Salome",722240856)
+console.log(mkulima.vendors)
+
+
+mkulima.addProduct(211,"tomatoes",30)
+mkulima.addProduct(312,"apples",50)
+console.log(mkulima.products)
+
+
+mkulima.getProduct(211)
+console.log(mkulima.products)
+
+
+
+mkulima.removeProduct(211)
+console.log(mkulima.products)
+
+
+mkulima.updateProduct(211,"kales",20)
+mkulima.updateProduct(312,"kiwi",100)
+console.log(mkulima.products)
+
+
+mkulima.getPrintProduct()
+console.log(mkulima.printProducts)
+
+
+mkulima.createOrder(83,7,96,34)
+console.log(mkulima.orders)
+
