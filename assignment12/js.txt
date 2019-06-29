@@ -1,0 +1,69 @@
+
+
+
+    var setColor = ()=>{
+    var titleColor = document.getElementById("title");
+    titleColor.style.color = 
+    titleColor.style.color ==="green"? "silver":"green";
+}
+setInterval(setColor,1000);
+    
+    h3a.onclick = () =>{
+      
+    }
+
+
+
+    var fruitLists = document.getElementById('fruitList');
+    var vegLists = document.getElementById('vegList');
+    fruitLists.forEach((element)=>element.style.display='none')
+    vegLists.forEach((element)=>element.style.display='none')
+
+    var showDetails = (idTag) => {
+    var element = document.getElementById(idTag);
+    element.style.display =element.style.display == 'none'? 'inline-block' : 'none'
+}
+    let fruits = ['mangoes','Bananas','Water melons']
+    let vegetables = ['onions','Tomatoes','Kales']
+
+    function createListElement(text){
+    var listItem = document.createTextNode(text)
+    listItem.appendChild(listItemText)
+    return listItem
+}
+
+    function dynamicListRender(){
+    var listItems = (items) =>{
+    return items.map((item) =>createListElement(item));
+  }
+    function addListItems(id,allItems){
+    listItems(allItems).forEach(listElement =>{
+      id.appendChild(listElement)
+    })
+                                
+  }
+    addListItems(fruitLists,fruits)
+  }
+
+    function inputValues(){
+    return document.getElementById('fruit').value
+}
+
+    function appendNewElement(){
+    fruits = [...fruits,inputValues()]
+    appendSingleItem(fruitLists,createListElement(inputValues()))
+  
+}
+    function appendSingleItem(id,singleItem){
+    id.appendChild(singleItem)
+}
+    var vegsInput = document.getElementById('vegs');
+    vegsInput.addEventListener('keyup',function(event){
+  if(event.keyCode === 13){
+    event.preventDefault();
+    var newVegetable = vegsInput.value
+    vegetables = [...vegetables,newVegetable]
+    appendSingleItem(vegList,createListElement(newVegetable))
+  }
+})
+dynamicListRender()
